@@ -1,12 +1,17 @@
-import "./App.css";
+import { FormCreateTask } from "./components/FormCreateTask";
+import { Header } from "./components/Header";
 import "./global.css";
+import styles from "./App.module.css";
+import { GithubProjectLink } from "./components/GithubProjectLink";
 
 function App() {
   return (
-    <div>
-      <p>
-        <h1>hello word</h1>
-      </p>
+    <div className={styles.container}>
+      <Header />
+      <GithubProjectLink />
+      <div>
+        <FormCreateTask />
+      </div>
     </div>
   );
 }

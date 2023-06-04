@@ -1,7 +1,7 @@
 :root {
   --white: #fff;
   --blue-dark: #1e6f9f;
-  --blue: #4ea8de;
+  --blue: rgb(71, 152, 202);
   --purple-dark: #5e60ce;
   --purple: #8284fa;
   --gray-100: #f2f2f2;
@@ -16,10 +16,18 @@
   --danger: #e25858;
 }
 
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 :focus {

@@ -1,0 +1,12 @@
+.button {
+  color: var(--white);
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: var(--gray-300);
+  transition: all 0.3s;
+}
