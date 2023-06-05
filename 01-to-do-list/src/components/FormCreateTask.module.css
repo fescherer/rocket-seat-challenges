@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
-
+  width: 100%;
   margin-top: -1rem;
 }
 
@@ -28,7 +28,7 @@
 .input {
   background-color: var(--gray-500);
   border-radius: 8px;
-  min-width: 50%;
+  width: 100%;
   padding: 0.5rem 1rem;
   color: var(--gray-100);
   font-size: 1rem;
