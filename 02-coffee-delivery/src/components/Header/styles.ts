@@ -8,8 +8,8 @@ export const Container = styled.div`
 `
 
 export const ShoppingButton = styled.button`
-  color: ${({ theme }) => theme['yellow-dark']};
-  background-color: ${({ theme }) => theme['yellow-light']};
+  color: ${({ theme }) => theme.colors['yellow-dark']};
+  background-color: ${({ theme }) => theme.colors['yellow-light']};
   border-radius: 6px;
   padding: 0.3rem;
 `
