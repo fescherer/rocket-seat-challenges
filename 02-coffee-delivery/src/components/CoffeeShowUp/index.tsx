@@ -1,5 +1,6 @@
 import * as S from './styles'
 import { Clock, Coffee, Package, ShoppingCart } from '@phosphor-icons/react'
+import imgSplash from '../../assets/coffee-splash.png'
 
 export function CoffeeShowUp() {
   return (
@@ -43,7 +44,8 @@ export function CoffeeShowUp() {
           </S.StatItem>
         </S.StatsContainer>
       </S.TitleWrapper>
-      <S.imgDiv></S.imgDiv>
+      <S.ImgSplash src={imgSplash}></S.ImgSplash>
     </S.Wrapper>
   )
 }
+

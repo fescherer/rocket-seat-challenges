@@ -21,5 +21,13 @@
   ],
   "editor.formatOnSave": true,
   "prettier.requireConfig": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#121214",
+    "titleBar.activeForeground": "#8257e5",
+    "titleBar.inactiveBackground": "#121214",
+    "titleBar.inactiveForeground": "#8257e5",
+    "sash.hoverBorder": "#121214"
+  }
 }
+

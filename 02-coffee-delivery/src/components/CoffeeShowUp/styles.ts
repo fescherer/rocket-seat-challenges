@@ -7,6 +7,7 @@ type IconType = {
 export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `
 
 export const TitleWrapper = styled.div`
@@ -54,8 +55,9 @@ export const Icon = styled.div<IconType>`
   background-color: ${({ bg, theme }) => theme.colors[bg]};
 `
 
-export const imgDiv = styled.div`
-  width: 476px;
-  height: 360px;
-  background-color: red;
+export const ImgSplash = styled.img`
+  @media (max-width: 900px) {
+    display: none;
+  }
 `
+
