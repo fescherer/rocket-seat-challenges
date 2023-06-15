@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  :focus {
+  :focus-visible {
     outline: none;
     box-shadow: 0 0 0 2px ${({ theme }) => theme.colors['purple-dark']};
   }
@@ -34,4 +34,3 @@ export const GlobalStyle = createGlobalStyle`
     outline: inherit;
   }
 `
-

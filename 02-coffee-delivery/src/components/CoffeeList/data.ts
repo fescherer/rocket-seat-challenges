@@ -12,14 +12,15 @@ import latte from '../../assets/coffee/latte.png'
 import macchiato from '../../assets/coffee/macchiato.png'
 import mochaccino from '../../assets/coffee/mochaccino.png'
 import withmilk from '../../assets/coffee/withmilk.png'
+import { CoffeeType } from '../../@types/Coffee'
 
-export const coffees = [
+export const coffees: CoffeeType[] = [
   {
     id: 1,
     name: 'Expresso Tradicional',
     description: 'O tradicional café feito com água quente e grãos moídos',
     price: 9.9,
-    tags: ['traditional', 'icy', 'milky', 'special', 'alcoholic'],
+    tags: ['traditional'],
     image: expresso
   },
   {
