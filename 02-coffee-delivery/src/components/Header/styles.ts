@@ -35,5 +35,28 @@ export const ShoppingButton = styled(NavLink)`
   background-color: ${({ theme }) => theme.colors['yellow-light']};
   border-radius: 6px;
   padding: 0.3rem;
+  position: relative;
+  transition: 0.2s;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors['yellow-light']};
+    background-color: ${({ theme }) => theme.colors['yellow-dark']};
+  }
 `
 
+export const TotalItems = styled.span`
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  z-index: 10;
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors['yellow-dark']};
+
+  font-size: ${({ theme }) => theme.typography.text.s};
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+`

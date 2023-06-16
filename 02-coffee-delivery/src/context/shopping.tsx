@@ -25,7 +25,7 @@ export const ShoppingProvider = ({ children }: { children: ReactNode }) => {
         id: 1,
         name: 'Expresso Tradicional',
         description: 'O tradicional café feito com água quente e grãos moídos',
-        price: 9.9,
+        price: 50,
         tags: ['traditional'],
         image: expresso
       },
