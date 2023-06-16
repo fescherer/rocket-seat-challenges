@@ -21,3 +21,9 @@ export enum CoffeeEnum {
   special = 'ESPECIAL',
   alcoholic = 'ALCOÓLICO'
 }
+
+export type CoffeeList = {
+  id: number
+  coffee: CoffeeType
+  quantity: number
+}

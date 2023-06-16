@@ -2,6 +2,7 @@ import { Minus, Plus, ShoppingCart } from '@phosphor-icons/react'
 import { CoffeeEnum, CoffeeType } from '../../@types/Coffee'
 import * as S from './styles'
 import { useState } from 'react'
+import { useShoppingContext } from '../../context/shopping'
 
 type CoffeeProps = {
   coffee: CoffeeType
@@ -9,6 +10,18 @@ type CoffeeProps = {
 
 export function Coffee({ coffee }: CoffeeProps) {
   const [count, setCount] = useState(1)
+  const { setCoffeeList } = useShoppingContext()
+
+  function addCoffe() {
+    setCoffeeList((prev: CoffeeType[]) => [
+      ...prev,
+      {
+        id: prev.length,
+        coffee,
+        quantity: count
+      }
+    ])
+  }
 
   return (
     <S.Wrapper>
@@ -43,7 +56,7 @@ export function Coffee({ coffee }: CoffeeProps) {
             </S.PlusButton>
           </S.ButButtonContainer>
 
-          <S.ShoppingButton>
+          <S.ShoppingButton onClick={() => addCoffe()}>
             <ShoppingCart weight="fill" />
           </S.ShoppingButton>
         </S.BuyContainer>
