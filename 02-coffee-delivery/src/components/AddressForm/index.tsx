@@ -1,18 +1,16 @@
 import { MapPinLine } from '@phosphor-icons/react'
 import * as S from './styles'
+import { FormHeader } from '../FormHeader'
 
 export function AddressForm() {
   return (
     <S.Wrapper>
-      <S.Header>
-        <MapPinLine size={24} />
-        <S.TitleContainer>
-          <S.Title>Endereço de entrega</S.Title>
-          <S.Description>
-            Informe o endereço onde deseja receber seu pedido
-          </S.Description>
-        </S.TitleContainer>
-      </S.Header>
+      <FormHeader
+        icon={<MapPinLine size={24} />}
+        color="yellow"
+        title="Endereço de entrega"
+        description="Informe o endereço onde deseja receber seu pedido"
+      />
 
       <S.Container>
         <input placeholder="tel" />
