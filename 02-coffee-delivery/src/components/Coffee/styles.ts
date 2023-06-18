@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  width: 256px;
-  height: 310px;
+  width: 16rem;
+  height: 19.375rem;
   background-color: ${({ theme }) => theme.colors['base-card']};
   display: flex;
   flex-direction: column;
@@ -13,8 +13,8 @@ export const Wrapper = styled.div`
 `
 
 export const Image = styled.img`
-  width: 120px;
-  height: 120px;
+  width: 7.5rem;
+  height: 7.5rem;
   margin-top: -3rem;
 `
 
@@ -78,8 +78,8 @@ export const Price = styled.span`
 
 export const ShoppingButton = styled.button`
   padding: 0.5rem;
-  width: 38px;
-  height: 38px;
+  width: 2.375rem;
+  height: 2.375rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,7 +103,7 @@ export const ButButtonContainer = styled.div`
 
 export const BuyText = styled.span`
   display: flex;
-  width: 20px;
+  width: 1.25rem;
   justify-content: center;
 `
 

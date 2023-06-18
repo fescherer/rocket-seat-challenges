@@ -35,7 +35,7 @@ export const ButtonChangeItemContainer = styled.div`
   align-items: center;
   background-color: ${({ theme }) => theme.colors['base-button']};
   border-radius: 6px;
-  width: 100px;
+  width: 6.25rem;
 `
 
 export const ButtonChangeItem = styled.button`
@@ -77,5 +77,5 @@ export const Price = styled.span`
 export const Separator = styled.div`
   border: 1px solid ${({ theme }) => theme.colors['base-button']};
   width: 100%;
-  height: 1px;
+  height: 0.0625rem;
 `

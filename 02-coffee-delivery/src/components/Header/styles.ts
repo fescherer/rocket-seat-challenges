@@ -46,15 +46,15 @@ export const ShoppingButton = styled(NavLink)`
 
 export const TotalItems = styled.span`
   position: absolute;
-  right: -10px;
-  top: -10px;
+  right: -0.625rem;
+  top: -0.625rem;
   z-index: 10;
   color: ${({ theme }) => theme.colors.white};
   background-color: ${({ theme }) => theme.colors['yellow-dark']};
 
   font-size: ${({ theme }) => theme.typography.text.s};
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;

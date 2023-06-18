@@ -21,7 +21,7 @@ export const TitleContainer = styled.div`
   flex-direction: column;
   gap: 1rem;
   text-align: justify;
-  max-width: 580px;
+  max-width: 36.25rem;
 `
 
 export const Title = styled.h1`
@@ -49,8 +49,8 @@ export const StatItem = styled.div`
 export const Icon = styled.div<IconType>`
   padding: 0.5rem;
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   color: ${({ theme }) => theme.colors.white};
   background-color: ${({ bg, theme }) => theme.colors[bg]};
 `
@@ -60,4 +60,3 @@ export const ImgSplash = styled.img`
     display: none;
   }
 `
-

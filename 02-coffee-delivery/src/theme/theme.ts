@@ -34,25 +34,24 @@ export const defaultTheme = {
 
   typography: {
     title: {
-      xl: '48px',
-      l: '32px',
-      m: '24px',
-      s: '20px',
-      xs: '18px'
+      xl: '3rem',
+      l: '2rem',
+      m: '1.5rem',
+      s: '1.25rem',
+      xs: '1.125rem'
     },
     text: {
-      l: '20px',
-      m: '16px',
-      s: '14px',
-      xs: '12px'
+      l: '1.25rem',
+      m: '1rem',
+      s: '0.875rem',
+      xs: '0.75rem'
     },
     button: {
-      g: '14px',
-      m: '12px'
+      g: '0.875rem',
+      m: '0.75rem'
     },
     other: {
-      tag: '10px'
+      tag: '0.625rem'
     }
   }
 }
-
