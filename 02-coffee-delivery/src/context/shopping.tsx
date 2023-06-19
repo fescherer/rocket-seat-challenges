@@ -1,10 +1,12 @@
 import React, { ReactNode, createContext, useContext, useState } from 'react'
-import { CoffeeList } from '../@types/Coffee'
+import { CoffeeList, ShopInfo } from '../@types/Coffee'
 import expresso from '../assets/coffee/expresso.png'
 
 type ShoppingContextType = {
   coffeeList?: CoffeeList[]
   setCoffeeList?: React.Dispatch<React.SetStateAction<CoffeeList[]>> | any
+  shopInfo?: ShopInfo
+  setShopInfo?: React.Dispatch<React.SetStateAction<ShopInfo | undefined>> | any
   removeCoffeeFromList: (id: number) => void
   addCoffeeQuantity: (id: number) => void
   reduceCoffeeQuantity: (id: number) => void
@@ -12,6 +14,8 @@ type ShoppingContextType = {
 
 export const ShoppingContext = createContext<ShoppingContextType>({
   coffeeList: [],
+  shopInfo: undefined,
+  setShopInfo: () => null,
   setCoffeeList: () => null,
   removeCoffeeFromList: () => null,
   addCoffeeQuantity: () => null,
@@ -58,6 +62,8 @@ export const ShoppingProvider = ({ children }: { children: ReactNode }) => {
     }
   ])
 
+  const [shopInfo, setShopInfo] = useState<ShopInfo | undefined>()
+
   function removeCoffeeFromList(id: number) {
     setCoffeeList((prev) => prev.filter((coffee) => coffee.id !== id))
   }
@@ -86,6 +92,8 @@ export const ShoppingProvider = ({ children }: { children: ReactNode }) => {
     <ShoppingContext.Provider
       value={{
         coffeeList,
+        shopInfo,
+        setShopInfo,
         setCoffeeList,
         removeCoffeeFromList: (id: number) => removeCoffeeFromList(id),
         addCoffeeQuantity: (id: number) => addCoffeeQuantity(id),

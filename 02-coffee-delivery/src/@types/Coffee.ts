@@ -27,3 +27,14 @@ export type CoffeeList = {
   coffee: CoffeeType
   quantity: number
 }
+
+export type ShopInfo = {
+  number: string
+  neighborhood: string
+  zip: string
+  street: string
+  complement: string
+  state: string
+  city: string
+  payment: 'credit-card' | 'debit-card' | 'money'
+}

@@ -1,7 +1,12 @@
 import { Bank, CreditCard, Money } from '@phosphor-icons/react'
 import { FormHeader } from '../FormHeader'
 import * as S from './styles'
-import { useState } from 'react'
+import { UseFormGetValues, UseFormSetValue } from 'react-hook-form'
+
+type PaymentFormProps = {
+  setValue: UseFormSetValue<any>
+  getValues: UseFormGetValues<any>
+}
 
 const paymentMethods = [
   {
@@ -12,17 +17,19 @@ const paymentMethods = [
   {
     id: 2,
     icon: <Bank />,
-    title: 'Cartão de crédito'
+    title: 'Cartão de débito'
   },
   {
     id: 3,
     icon: <Money />,
-    title: 'Cartão de crédito'
+    title: 'Dinheiro'
   }
 ]
 
-export function PaymentForm() {
-  const [isSelected, setIsSelected] = useState(0)
+export function PaymentForm({ setValue, getValues }: PaymentFormProps) {
+  function setPaymentMethod(id: number) {
+    setValue('payment', id)
+  }
 
   return (
     <S.Wrapper>
@@ -37,8 +44,8 @@ export function PaymentForm() {
         {paymentMethods.map((item) => (
           <S.ItemContainer
             key={item.id}
-            isSelected={isSelected === item.id}
-            onClick={() => setIsSelected(item.id)}
+            isSelected={getValues() === item.id}
+            onClick={() => setPaymentMethod(item.id)}
           >
             {item.icon}
             <S.Item>{item.title}</S.Item>
