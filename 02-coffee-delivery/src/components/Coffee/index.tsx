@@ -3,6 +3,7 @@ import { CoffeeEnum, CoffeeType } from '../../@types/Coffee'
 import * as S from './styles'
 import { useState } from 'react'
 import { useShoppingContext } from '../../context/shopping'
+import { toast } from 'react-toastify'
 
 type CoffeeProps = {
   coffee: CoffeeType
@@ -56,7 +57,12 @@ export function Coffee({ coffee }: CoffeeProps) {
             </S.PlusButton>
           </S.ButButtonContainer>
 
-          <S.ShoppingButton onClick={() => addCoffe()}>
+          <S.ShoppingButton
+            onClick={() => {
+              addCoffe()
+              toast.success('Adicionado ao carrinho', { delay: 1000 })
+            }}
+          >
             <ShoppingCart weight="fill" />
           </S.ShoppingButton>
         </S.BuyContainer>
