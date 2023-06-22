@@ -1,3 +1,4 @@
+import { FormState } from 'react-hook-form'
 import { CoffeeList } from '../../@types/Coffee'
 import { useShoppingContext } from '../../context/shopping'
 import { CoffeeShoppingList } from '../CoffeeShoppingList'
@@ -11,7 +12,11 @@ function getTotalItens(coffeeList: CoffeeList[]) {
   return total
 }
 
-export function SelectedCoffee() {
+type SelectedCoffeeProps = {
+  formState: FormState<any>
+}
+
+export function SelectedCoffee({ formState }: SelectedCoffeeProps) {
   const { coffeeList } = useShoppingContext()
   const delivery = 3
 
@@ -40,7 +45,12 @@ export function SelectedCoffee() {
         </S.TotalItem>
       </S.TotalItensContainer>
 
-      <S.ConfirmButton>CONFIRMAR PEDIDO</S.ConfirmButton>
+      <S.ConfirmButton
+        type="submit"
+        disabled={!formState.isDirty || !formState.isValid}
+      >
+        CONFIRMAR PEDIDO
+      </S.ConfirmButton>
     </S.Wrapper>
   )
 }

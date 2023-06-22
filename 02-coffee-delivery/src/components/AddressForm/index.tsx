@@ -1,8 +1,13 @@
 import { MapPinLine } from '@phosphor-icons/react'
 import * as S from './styles'
 import { FormHeader } from '../FormHeader'
+import { UseFormRegister } from 'react-hook-form'
 
-export function AddressForm() {
+type AddressFormProps = {
+  register: UseFormRegister<any>
+}
+
+export function AddressForm({ register }: AddressFormProps) {
   return (
     <S.Wrapper>
       <FormHeader
@@ -13,17 +18,17 @@ export function AddressForm() {
       />
 
       <S.Container>
-        <input placeholder="tel" />
-        <input placeholder="Rua" />
+        <S.Input placeholder="zip" {...register('zip')} />
+        <S.Input placeholder="Rua" {...register('street')} />
         <S.NumberContainer>
-          <input placeholder="Número" />
-          <input placeholder="Complemento" />
+          <S.Input placeholder="Número" {...register('number')} />
+          <S.Input placeholder="Complemento" {...register('complement')} />
         </S.NumberContainer>
 
         <S.AdressContainer>
-          <input placeholder="Bairro" />
-          <input placeholder="Cidade" />
-          <input placeholder="RS" />
+          <S.Input placeholder="Bairro" {...register('neighborhood')} />
+          <S.Input placeholder="Cidade" {...register('city')} />
+          <S.Input placeholder="RS" {...register('state')} />
         </S.AdressContainer>
       </S.Container>
     </S.Wrapper>

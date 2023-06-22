@@ -1,35 +1,39 @@
 import { Bank, CreditCard, Money } from '@phosphor-icons/react'
 import { FormHeader } from '../FormHeader'
 import * as S from './styles'
-import { UseFormGetValues, UseFormSetValue } from 'react-hook-form'
+import { UseFormSetValue, UseFormWatch } from 'react-hook-form'
 
 type PaymentFormProps = {
   setValue: UseFormSetValue<any>
-  getValues: UseFormGetValues<any>
+  watch: UseFormWatch<any>
 }
 
 const paymentMethods = [
   {
     id: 1,
     icon: <CreditCard />,
-    title: 'Cartão de crédito'
+    title: 'Cartão de crédito',
+    slug: 'credit-card'
   },
   {
     id: 2,
     icon: <Bank />,
-    title: 'Cartão de débito'
+    title: 'Cartão de débito',
+    slug: 'debit-card'
   },
   {
     id: 3,
     icon: <Money />,
-    title: 'Dinheiro'
+    title: 'Dinheiro',
+    slug: 'money'
   }
 ]
 
-export function PaymentForm({ setValue, getValues }: PaymentFormProps) {
-  function setPaymentMethod(id: number) {
-    setValue('payment', id)
+export function PaymentForm({ setValue, watch }: PaymentFormProps) {
+  function setPaymentMethod(slug: string) {
+    setValue('payment', slug)
   }
+  const payment = watch('payment')
 
   return (
     <S.Wrapper>
@@ -44,8 +48,9 @@ export function PaymentForm({ setValue, getValues }: PaymentFormProps) {
         {paymentMethods.map((item) => (
           <S.ItemContainer
             key={item.id}
-            isSelected={getValues() === item.id}
-            onClick={() => setPaymentMethod(item.id)}
+            isSelected={payment === item.slug}
+            onClick={() => setPaymentMethod(item.slug)}
+            type="button"
           >
             {item.icon}
             <S.Item>{item.title}</S.Item>

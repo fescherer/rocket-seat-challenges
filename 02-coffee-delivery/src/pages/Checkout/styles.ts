@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.form`
   display: flex;
   flex-direction: row;
   gap: 1rem;
   width: 100%;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1033px) {
     flex-direction: column;
   }
 `

@@ -7,15 +7,18 @@ import { ShoppingProvider } from './context/shopping'
 
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { ConfirmationProvider } from './context/confirmation'
 
 function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <ShoppingProvider>
-        <BrowserRouter>
-          <ToastContainer />
-          <Router />
-        </BrowserRouter>
+        <ConfirmationProvider>
+          <BrowserRouter>
+            <ToastContainer />
+            <Router />
+          </BrowserRouter>
+        </ConfirmationProvider>
       </ShoppingProvider>
       <GlobalStyle />
     </ThemeProvider>

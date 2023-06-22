@@ -11,6 +11,8 @@ export const Wrapper = styled.div`
 
 export const PaymentContainer = styled.div`
   display: flex;
+  align-items: center;
+  font-size: ${({ theme }) => theme.typography.button.g};
   gap: 0.5rem;
 `
 
