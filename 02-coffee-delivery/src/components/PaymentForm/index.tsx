@@ -1,11 +1,10 @@
 import { Bank, CreditCard, Money } from '@phosphor-icons/react'
 import { FormHeader } from '../FormHeader'
 import * as S from './styles'
-import { UseFormSetValue, UseFormWatch } from 'react-hook-form'
+import { Control, Controller } from 'react-hook-form'
 
 type PaymentFormProps = {
-  setValue: UseFormSetValue<any>
-  watch: UseFormWatch<any>
+  control: Control<any>
 }
 
 const paymentMethods = [
@@ -29,12 +28,7 @@ const paymentMethods = [
   }
 ]
 
-export function PaymentForm({ setValue, watch }: PaymentFormProps) {
-  function setPaymentMethod(slug: string) {
-    setValue('payment', slug)
-  }
-  const payment = watch('payment')
-
+export function PaymentForm({ control }: PaymentFormProps) {
   return (
     <S.Wrapper>
       <FormHeader
@@ -44,19 +38,27 @@ export function PaymentForm({ setValue, watch }: PaymentFormProps) {
         description="O pagamento é feito na entrega. Escolha a forma que deseja pagar"
       />
 
-      <S.PaymentContainer>
-        {paymentMethods.map((item) => (
-          <S.ItemContainer
-            key={item.id}
-            isSelected={payment === item.slug}
-            onClick={() => setPaymentMethod(item.slug)}
-            type="button"
-          >
-            {item.icon}
-            <S.Item>{item.title}</S.Item>
-          </S.ItemContainer>
-        ))}
-      </S.PaymentContainer>
+      <Controller
+        control={control}
+        name="payment"
+        render={({ field }) => {
+          return (
+            <S.PaymentContainer>
+              {paymentMethods.map((item) => (
+                <S.ItemContainer
+                  key={item.id}
+                  isSelected={field.value === item.slug}
+                  onClick={() => field.onChange(item.slug)}
+                  type="button"
+                >
+                  {item.icon}
+                  <S.Item>{item.title}</S.Item>
+                </S.ItemContainer>
+              ))}
+            </S.PaymentContainer>
+          )
+        }}
+      />
     </S.Wrapper>
   )
 }

@@ -24,18 +24,21 @@ export function CoffeeShoppingList() {
               <S.ItemContainer>
                 <S.ButtonChangeItemContainer>
                   <S.ButtonChangeItem
+                    type="button"
                     onClick={() => reduceCoffeeQuantity(item.coffee.id)}
                   >
                     <Minus />
                   </S.ButtonChangeItem>
                   <S.ButtonSpan>{item.quantity}</S.ButtonSpan>
                   <S.ButtonChangeItem
+                    type="button"
                     onClick={() => addCoffeeQuantity(item.coffee.id)}
                   >
                     <Plus />
                   </S.ButtonChangeItem>
                 </S.ButtonChangeItemContainer>
                 <S.ButtonRemove
+                  type="button"
                   onClick={() => removeCoffeeFromList(item.coffee.id)}
                 >
                   <Trash color={theme.colors['purple']} size={18} />

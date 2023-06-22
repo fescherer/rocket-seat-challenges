@@ -14,9 +14,16 @@ export const Container = styled.div`
   }
 `
 
+export const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  height: 100%;
+`
+
 export const ItemsContainer = styled.div`
   display: flex;
   flex-direction: column;
+  height: 100%;
   border: 1px solid ${({ theme }) => theme.colors.purple};
   padding: 1rem;
   border-radius: 6px 36px 6px 36px;

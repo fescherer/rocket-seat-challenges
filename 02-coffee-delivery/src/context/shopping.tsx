@@ -1,6 +1,5 @@
 import React, { ReactNode, createContext, useContext, useState } from 'react'
 import { CoffeeList, ShopInfo } from '../@types/Coffee'
-import expresso from '../assets/coffee/expresso.png'
 
 type ShoppingContextType = {
   coffeeList?: CoffeeList[]
@@ -23,44 +22,7 @@ export const ShoppingContext = createContext<ShoppingContextType>({
 })
 
 export const ShoppingProvider = ({ children }: { children: ReactNode }) => {
-  const [coffeeList, setCoffeeList] = useState<CoffeeList[]>([
-    {
-      coffee: {
-        id: 1,
-        name: 'Expresso Tradicional',
-        description: 'O tradicional café feito com água quente e grãos moídos',
-        price: 50,
-        tags: ['traditional'],
-        image: expresso
-      },
-      quantity: 3,
-      id: 1
-    },
-    {
-      coffee: {
-        id: 2,
-        name: 'Expresso Tradicional',
-        description: 'O tradicional café feito com água quente e grãos moídos',
-        price: 9.9,
-        tags: ['traditional'],
-        image: expresso
-      },
-      quantity: 3,
-      id: 2
-    },
-    {
-      coffee: {
-        id: 3,
-        name: 'Expresso Tradicional',
-        description: 'O tradicional café feito com água quente e grãos moídos',
-        price: 9.9,
-        tags: ['traditional'],
-        image: expresso
-      },
-      quantity: 3,
-      id: 3
-    }
-  ])
+  const [coffeeList, setCoffeeList] = useState<CoffeeList[]>([])
 
   const [shopInfo, setShopInfo] = useState<ShopInfo | undefined>()
 
@@ -69,6 +31,7 @@ export const ShoppingProvider = ({ children }: { children: ReactNode }) => {
   }
 
   function addCoffeeQuantity(id: number) {
+    console.log(coffeeList, id)
     setCoffeeList((prev) =>
       prev.map((coffee) => {
         if (id === coffee.id)

@@ -18,58 +18,60 @@ export function Confirmation() {
       <S.Title>Uhu! Pedido confirmado</S.Title>
       <span>Agora é só aguardar que logo o café chegará até você</span>
       <S.Container>
-        <S.ItemsContainer>
-          <S.Item>
-            <S.IconContainer color="purple">
-              <MapPin />
-            </S.IconContainer>
-            <S.ContainerStreet>
-              <span>
-                Entrega em Rua{' '}
-                <strong>
-                  {confirmation?.street}, {confirmation?.number}
-                </strong>
-              </span>
-              {confirmation?.complement && (
-                <span>{confirmation.complement}</span>
-              )}
-              <span>
-                {confirmation?.neighborhood} - {confirmation?.city},{' '}
-                {confirmation?.state}
-              </span>
-            </S.ContainerStreet>
-          </S.Item>
+        <S.Wrapper>
+          <S.ItemsContainer>
+            <S.Item>
+              <S.IconContainer color="purple">
+                <MapPin />
+              </S.IconContainer>
+              <S.ContainerStreet>
+                <span>
+                  Entrega em Rua{' '}
+                  <strong>
+                    {confirmation?.street}, {confirmation?.number}
+                  </strong>
+                </span>
+                {confirmation?.complement && (
+                  <span>{confirmation.complement}</span>
+                )}
+                <span>
+                  {confirmation?.neighborhood} - {confirmation?.city},{' '}
+                  {confirmation?.state}
+                </span>
+              </S.ContainerStreet>
+            </S.Item>
 
-          <S.Item>
-            <S.IconContainer color="yellow-dark">
-              <Clock />
-            </S.IconContainer>
-            <S.ContainerStreet>
-              <span>Previsão de entrega</span>
+            <S.Item>
+              <S.IconContainer color="yellow-dark">
+                <Clock />
+              </S.IconContainer>
+              <S.ContainerStreet>
+                <span>Previsão de entrega</span>
 
-              <strong>20 min - 30 min</strong>
-            </S.ContainerStreet>
-          </S.Item>
+                <strong>20 min - 30 min</strong>
+              </S.ContainerStreet>
+            </S.Item>
 
-          <S.Item>
-            <S.IconContainer color="yellow">
-              <CurrencyDollar />
-            </S.IconContainer>
-            <S.ContainerStreet>
-              <span>Pagamento na entrega</span>
+            <S.Item>
+              <S.IconContainer color="yellow">
+                <CurrencyDollar />
+              </S.IconContainer>
+              <S.ContainerStreet>
+                <span>Pagamento na entrega</span>
 
-              <span>
-                <strong>
-                  {
-                    paymentEnum[
-                      confirmation?.payment as keyof typeof paymentEnum
-                    ]
-                  }
-                </strong>
-              </span>
-            </S.ContainerStreet>
-          </S.Item>
-        </S.ItemsContainer>
+                <span>
+                  <strong>
+                    {
+                      paymentEnum[
+                        confirmation?.payment as keyof typeof paymentEnum
+                      ]
+                    }
+                  </strong>
+                </span>
+              </S.ContainerStreet>
+            </S.Item>
+          </S.ItemsContainer>
+        </S.Wrapper>
 
         <img src={illustration} />
       </S.Container>

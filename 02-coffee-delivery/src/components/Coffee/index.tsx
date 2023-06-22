@@ -17,7 +17,7 @@ export function Coffee({ coffee }: CoffeeProps) {
     setCoffeeList((prev: CoffeeType[]) => [
       ...prev,
       {
-        id: prev.length,
+        id: coffee.id,
         coffee,
         quantity: count
       }
@@ -60,7 +60,7 @@ export function Coffee({ coffee }: CoffeeProps) {
           <S.ShoppingButton
             onClick={() => {
               addCoffe()
-              toast.success('Adicionado ao carrinho', { delay: 1000 })
+              toast.success('Adicionado ao carrinho')
             }}
           >
             <ShoppingCart weight="fill" />
