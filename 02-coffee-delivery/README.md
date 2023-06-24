@@ -9,17 +9,17 @@
 [![MIT License][license-shield]][license-url]
 
   <br />
-  <a href="https://github.com/ofelipescherer/project-studies">
+  <a href="https://github.com/ofelipescherer/rocket-seat-challenges">
     <img src="https://user-images.githubusercontent.com/62115215/219973173-d960555f-6d15-4604-ada7-d38065c36ffe.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Let me Ask</h3>
+<h3 align="center">Challenge 02 Coffee Delivery</h3>
 
 <p align="center">
 
-A live chat managment app
+A coffee delivery systeam
 <br />
-<a href="https://github.com/ofelipescherer/project-studies"><strong>Explore the docs »</strong></a>
+<a href="https://github.com/ofelipescherer/rocket-seat-challenges"><strong>Explore the docs »</strong></a>
 <br />
 <br />
 <a href="#about">About</a>
@@ -47,9 +47,9 @@ A live chat managment app
 
 ## 💬 About 💬
 
-This project was made for managment a livestream chat. By adding some custom preferences for the streamer decide the best options.
+This project was made based on challenge 02 of Rockeseat Bootcamp Ignite.
 
-[Deploy](https://letmeask-aulas-45172.web.app)
+[Deploy](challenge-02.felipescherer.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -61,7 +61,7 @@ This project was made for managment a livestream chat. By adding some custom pre
 
 <div align="center">
 
-[![Next][next.js]][next-url]
+[![Vite][vite]][vite-url]
 [![React][react.js]][react-url]
 [![HTML 5][html 5]][html-url]
 [![CSS 3][css 3]][css-url]
@@ -90,22 +90,19 @@ To get this project up and running locally on your pc, follow the steps:
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/ofelipescherer/project-studies.git
+   git clone https://github.com/ofelipescherer/rocket-seat-challenges.git
    ```
 2. Go to project's folder
 
 ```sh
-cd rocketseat
+cd rocketseat/02-coffee-delivery
 ```
 
 3. Install NPM packages
    ```sh
    npm install
    ```
-4. This project uses Firebase as database, so I cannot pass my firebase credentials. If you want to run locally you need to provide your own credentials. For this:
-   4.1. Create a google account;
-   4.2. Login at [firebase site](https://firebase.google.com);
-   4.3. Create a project and get your SDK credentials;
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -115,13 +112,9 @@ cd rocketseat
 
 ## 🙋 How to use 🙋
 
-![Home screen](https://user-images.githubusercontent.com/62115215/219976815-47640513-1c8c-4df1-b0fb-69a38212e4dc.png)
+![Home screen](https://github.com/ofelipescherer/rocket-seat-challenges/assets/62115215/85c68406-0db2-4eb8-81e3-5659a065f8c9)
 
-![Create room](https://user-images.githubusercontent.com/62115215/219977167-3ef523d4-20e5-42ce-9328-afe0c0d6babd.png)
-
-![Inside Room](https://user-images.githubusercontent.com/62115215/219977213-803b560e-e959-4b59-a95f-45ef966b40e7.png)
-
-![Room with questions](https://user-images.githubusercontent.com/62115215/219977261-e13586f2-bb16-40ae-b2d2-7479ecfd15d8.png)
+![Mobile Coffee List](https://github.com/ofelipescherer/rocket-seat-challenges/assets/62115215/939021cc-1b3f-47da-85aa-7213c4237a89)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -186,7 +179,7 @@ My name is Felipe Scherer and you can find me at:
 
 ## 🤗 Special Thanks 🤗
 
-My thanks to the incredible instructors of this immersion. <3
+My thanks to the incredible instructors of this projects. <3
 
 <table>
   <tr>
@@ -205,24 +198,24 @@ My thanks to the incredible instructors of this immersion. <3
 
 <!-- Badges and Badges Link -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/ofelipescherer/project-studies.svg?style=for-the-badge
-[contributors-url]: https://github.com/ofelipescherer/project-studies/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/ofelipescherer/project-studies.svg?style=for-the-badge
-[forks-url]: https://github.com/ofelipescherer/project-studies/network/members
-[stars-shield]: https://img.shields.io/github/stars/ofelipescherer/project-studies.svg?style=for-the-badge
-[stars-url]: https://github.com/ofelipescherer/project-studies/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ofelipescherer/project-studies.svg?style=for-the-badge
-[issues-url]: https://github.com/ofelipescherer/project-studies/issues
-[license-shield]: https://img.shields.io/github/license/ofelipescherer/project-studies.svg?style=for-the-badge
-[license-url]: https://github.com/ofelipescherer/project-studies/blob/master/LICENSE.md
+[contributors-shield]: https://img.shields.io/github/contributors/ofelipescherer/rocket-seat-challenges.svg?style=for-the-badge
+[contributors-url]: https://github.com/ofelipescherer/rocket-seat-challenges/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ofelipescherer/rocket-seat-challenges.svg?style=for-the-badge
+[forks-url]: https://github.com/ofelipescherer/rocket-seat-challenges/network/members
+[stars-shield]: https://img.shields.io/github/stars/ofelipescherer/rocket-seat-challenges.svg?style=for-the-badge
+[stars-url]: https://github.com/ofelipescherer/rocket-seat-challenges/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ofelipescherer/rocket-seat-challenges.svg?style=for-the-badge
+[issues-url]: https://github.com/ofelipescherer/rocket-seat-challenges/issues
+[license-shield]: https://img.shields.io/github/license/ofelipescherer/rocket-seat-challenges.svg?style=for-the-badge
+[license-url]: https://github.com/ofelipescherer/rocket-seat-challenges/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=0E76A8
 [linkedin-url]: https://www.linkedin.com/in/ofelipescherer
 [youtube-shield]: https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white
 [youtube-url]: https://www.youtube.com/channel/UCySqmz_Rohnl53VLoNQsnKg
 [github-shield]: https://img.shields.io/badge/Github-000000?style=for-the-badge&logo=github&logoColor=white
 [github-url]: https://github.com/ofelipescherer
-[next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[next-url]: https://nextjs.org/
+[vite]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
+[vite-url]: https://vitejs.dev
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [react-url]: https://reactjs.org/
 [html 5]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
