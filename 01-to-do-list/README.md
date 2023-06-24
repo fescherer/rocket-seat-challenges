@@ -112,9 +112,8 @@ cd rocketseat/01-coffee-delivery
 
 ## 🙋 How to use 🙋
 
-![Home screen](https://github.com/ofelipescherer/rocket-seat-challenges/assets/62115215/85c68406-0db2-4eb8-81e3-5659a065f8c9)
+![Home screen](https://github.com/ofelipescherer/project-euler/assets/62115215/39578de4-2e7a-4430-941c-765c8b287d26)
 
-![Mobile Coffee List](https://github.com/ofelipescherer/rocket-seat-challenges/assets/62115215/939021cc-1b3f-47da-85aa-7213c4237a89)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
