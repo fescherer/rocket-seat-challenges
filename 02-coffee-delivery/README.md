@@ -10,7 +10,7 @@
 
   <br />
   <a href="https://github.com/ofelipescherer/rocket-seat-challenges">
-    <img src="https://user-images.githubusercontent.com/62115215/219973173-d960555f-6d15-4604-ada7-d38065c36ffe.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/ofelipescherer/rocket-seat-challenges/assets/62115215/c6b107af-1f16-4544-9a06-adf5e6ce0be2" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Challenge 02 Coffee Delivery</h3>
