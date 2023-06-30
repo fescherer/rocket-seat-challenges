@@ -1,4 +1,4 @@
-export function Articles() {
+export function Article() {
   return (
     <div>
       <span>article</span>
