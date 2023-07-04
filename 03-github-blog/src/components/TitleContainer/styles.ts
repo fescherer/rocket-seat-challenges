@@ -12,4 +12,5 @@ export const Container = styled.div`
   margin-top: -1rem;
 
   background: ${({ theme }) => theme.colors['base-profile']};
+  box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.2);
 `
