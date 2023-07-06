@@ -1,7 +1,7 @@
 import { styled } from 'styled-components'
 
 export const Background = styled.div`
-  background-color: ${({ theme }) => theme.colors['base-background']};
+  background-color: ${({ theme }) => theme.colors['base-profile']};
   color: ${({ theme }) => theme.colors['base-text']};
   position: relative;
   height: 100%;
