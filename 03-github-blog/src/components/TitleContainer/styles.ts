@@ -26,10 +26,12 @@ export const InfoContainer = styled.div`
   flex-direction: column;
   padding-left: 2rem;
   padding-right: 1rem;
+  flex: 1;
 `
 
 export const TitleContainer = styled.div`
   display: flex;
+  width: 100%;
   justify-content: space-between;
 `
 export const LinkContainer = styled.div`
@@ -37,6 +39,11 @@ export const LinkContainer = styled.div`
   gap: 0.25rem;
   align-items: center;
   color: ${({ theme }) => theme.colors['blue']};
+`
+
+export const Anchor = styled.a`
+  color: ${({ theme }) => theme.colors['blue']};
+  text-decoration: none;
 `
 
 export const TextContainer = styled.div`

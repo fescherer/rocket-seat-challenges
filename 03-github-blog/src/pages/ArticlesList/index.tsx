@@ -18,7 +18,7 @@ export function ArticlesList() {
 
         <S.ItemsContainer>
           {issues.map((item) => (
-            <S.ItemContainer>
+            <S.ItemContainer key={item}>
               <S.ItemTitleContainer>
                 <h2>Javascript</h2>
                 <time>Há 1 dia</time>
