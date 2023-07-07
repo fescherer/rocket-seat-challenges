@@ -1,9 +1,9 @@
-import { TitleContainer } from '../../components/TitleContainer'
+import { ArticleTitleContainer } from '../../components/ArticleTitleContainer'
 
 export function Article() {
   return (
     <div>
-      <TitleContainer />
+      <ArticleTitleContainer />
       <span>article</span>
     </div>
   )

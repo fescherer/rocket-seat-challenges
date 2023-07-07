@@ -52,6 +52,7 @@ export const ItemsContainer = styled.div`
 export const ItemContainer = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 
   background: ${({ theme }) => theme.colors['base-post']};
   border-radius: 10px;
@@ -65,9 +66,22 @@ export const ItemTitleContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  flex-direction: row;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
 `
 
 export const ItemDescription = styled.span`
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 `
