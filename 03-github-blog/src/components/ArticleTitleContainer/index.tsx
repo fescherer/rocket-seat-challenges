@@ -6,19 +6,27 @@ import {
   CaretLeft
 } from '@phosphor-icons/react'
 import * as S from './styles'
+import { useNavigate } from 'react-router-dom'
+import { useGithubData } from '../../contexts/GithubData'
 
 export function ArticleTitleContainer() {
+  const { data } = useGithubData()
+
+  const navigate = useNavigate()
+
+  if (!data) return <></>
+
   return (
     <S.Container>
       <S.ButtonsContainer>
-        <div>
+        <S.Button onClick={() => navigate('/')}>
           <CaretLeft size={16} />
           <span>Voltar</span>
-        </div>
-        <div>
+        </S.Button>
+        <a target="_blank" href={data.html_url}>
           <span>Ver no Github</span>
           <ArrowSquareOut size={16} />
-        </div>
+        </a>
       </S.ButtonsContainer>
 
       <h2>JavaScript data types and data structures</h2>

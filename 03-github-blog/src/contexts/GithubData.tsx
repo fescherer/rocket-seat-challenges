@@ -26,7 +26,7 @@ export function GithubDataProvider({ children }: GithubDataProviderProps) {
   const [data, setData] = useState<any>()
 
   const fetchData = useCallback(async (user: string) => {
-    const response = await githubApi.get(user)
+    const response = await githubApi.get(`/users/${user}`)
 
     setData(response.data)
   }, [])

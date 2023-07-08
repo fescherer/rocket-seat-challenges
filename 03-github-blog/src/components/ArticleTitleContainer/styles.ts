@@ -11,11 +11,18 @@ export const Container = styled.div`
   border-radius: 10px;
   margin: auto;
   margin-top: -4rem;
+  gap: 2rem;
 
   background: ${({ theme }) => theme.colors['base-profile']};
   box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.2);
 
   padding: 1rem;
+`
+
+export const Button = styled.button`
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 `
 
 export const ButtonsContainer = styled.div`

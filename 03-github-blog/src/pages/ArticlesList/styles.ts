@@ -1,5 +1,4 @@
 import { styled } from 'styled-components'
-
 export const ListWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -49,7 +48,7 @@ export const ItemsContainer = styled.div`
   margin-bottom: 2rem;
 `
 
-export const ItemContainer = styled.div`
+export const ItemContainer = styled.button`
   display: flex;
   flex-direction: column;
   gap: 1rem;
