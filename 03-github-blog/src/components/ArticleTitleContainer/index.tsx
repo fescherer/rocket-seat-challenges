@@ -9,8 +9,12 @@ import * as S from './styles'
 import { useNavigate } from 'react-router-dom'
 import { useGithubData } from '../../contexts/GithubData'
 
-export function ArticleTitleContainer() {
-  const { data } = useGithubData()
+type ArticleTitleContainerProps = {
+  data: any
+}
+
+export function ArticleTitleContainer({ data }: ArticleTitleContainerProps) {
+  const { data: GitData } = useGithubData()
 
   const navigate = useNavigate()
 
@@ -23,28 +27,28 @@ export function ArticleTitleContainer() {
           <CaretLeft size={16} />
           <span>Voltar</span>
         </S.Button>
-        <a target="_blank" href={data.html_url}>
+        <a target="_blank" href={GitData.html_url}>
           <span>Ver no Github</span>
           <ArrowSquareOut size={16} />
         </a>
       </S.ButtonsContainer>
 
-      <h2>JavaScript data types and data structures</h2>
+      <h2>{data.title}</h2>
 
       <S.IconsContainer>
         <S.IconContainer>
           <GithubLogo size={16} weight="fill" />
-          <span>aads</span>
+          <span>{data.user.login}</span>
         </S.IconContainer>
 
         <S.IconContainer>
           <CalendarBlank size={16} weight="fill" />
-          <span>aads</span>
+          <span>{data.created_at}</span>
         </S.IconContainer>
 
         <S.IconContainer>
           <ChatCircle size={16} weight="fill" />
-          <span>aads</span>
+          <span>{data.comments}</span>
         </S.IconContainer>
       </S.IconsContainer>
     </S.Container>
