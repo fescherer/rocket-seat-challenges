@@ -3,7 +3,7 @@ import { TitleContainer } from '../../components/TitleContainer'
 import { githubApi } from '../../lib/axios'
 import * as S from './styles'
 import { useNavigate } from 'react-router-dom'
-import { format, formatDistanceToNow } from 'date-fns'
+import { formatDistanceToNow } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 
 function getTime(date: Date) {
