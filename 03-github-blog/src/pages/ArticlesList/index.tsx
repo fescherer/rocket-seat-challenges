@@ -2,7 +2,19 @@ import { useState, useEffect } from 'react'
 import { TitleContainer } from '../../components/TitleContainer'
 import { githubApi } from '../../lib/axios'
 import * as S from './styles'
-import { useNavigate, useNavigation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { format, formatDistanceToNow } from 'date-fns'
+import ptBR from 'date-fns/locale/pt-BR'
+
+function getTime(date: Date) {
+  const publishedDateRelativeToNow = formatDistanceToNow(date, {
+    locale: ptBR,
+    addSuffix: true
+  })
+
+  return publishedDateRelativeToNow
+}
+
 export function ArticlesList() {
   const [issues, setIssues] = useState<any>([])
   const navigate = useNavigate()
@@ -20,24 +32,11 @@ export function ArticlesList() {
 
   function getIssues(value: string) {
     setTimeout(async () => {
-      console.log('====>', 'sasa', value)
-      // setFilteredCities(
-      //   citiesArray.filter((city) =>
-      //     city.toLowerCase().includes(query.toLowerCase())
-      //   )
-      // )
       const uri = `/search/issues?q=${value} repo:rocketseat-education/reactjs-github-blog-challenge`
-      const a = await githubApi.get(uri)
-      setIssues(a.data.items)
-      console.log(a)
+      const items = await githubApi.get(uri)
+      setIssues(items.data.items)
     }, 500)
   }
-
-  // https://api.github.com/search/issues?q=Boas%20práticas%20repo:rocketseat-education/reactjs-github-blog-challenge
-
-  //https://github.com/rocketseat-education/reactjs-github-blog-challenge/issues/1
-
-  //https://api.github.com/repos/rocketseat-education/reactjs-github-blog-challenge/issues/1
   return (
     <div>
       <TitleContainer />
@@ -61,9 +60,9 @@ export function ArticlesList() {
               key={item.number}
               onClick={() => navigate(`/${item.number}`)}
             >
+              <S.Time>Há {getTime(new Date(item.created_at))} dia</S.Time>
               <S.ItemTitleContainer>
                 <h2>{item.title}</h2>
-                <time>Há 1 dia</time>
               </S.ItemTitleContainer>
 
               <S.ItemDescription>{item.body}</S.ItemDescription>

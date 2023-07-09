@@ -7,15 +7,12 @@ import {
 } from '@phosphor-icons/react'
 import * as S from './styles'
 import { useNavigate } from 'react-router-dom'
-import { useGithubData } from '../../contexts/GithubData'
 
 type ArticleTitleContainerProps = {
   data: any
 }
 
 export function ArticleTitleContainer({ data }: ArticleTitleContainerProps) {
-  const { data: GitData } = useGithubData()
-
   const navigate = useNavigate()
 
   if (!data) return <></>
@@ -27,7 +24,7 @@ export function ArticleTitleContainer({ data }: ArticleTitleContainerProps) {
           <CaretLeft size={16} />
           <span>Voltar</span>
         </S.Button>
-        <a target="_blank" href={GitData.html_url}>
+        <a target="_blank" href={data.html_url}>
           <span>Ver no Github</span>
           <ArrowSquareOut size={16} />
         </a>

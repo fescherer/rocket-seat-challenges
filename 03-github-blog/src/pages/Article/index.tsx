@@ -2,6 +2,8 @@ import { useParams } from 'react-router-dom'
 import { ArticleTitleContainer } from '../../components/ArticleTitleContainer'
 import { useEffect, useState } from 'react'
 import { githubApi } from '../../lib/axios'
+import * as S from './styles'
+import ReactMarkdown from 'react-markdown'
 
 export function Article() {
   const [data, setData] = useState<any>()
@@ -24,7 +26,10 @@ export function Article() {
   return (
     <div>
       <ArticleTitleContainer data={data} />
-      <span>{data.body}</span>
+
+      <S.Article>
+        <ReactMarkdown>{data.body}</ReactMarkdown>
+      </S.Article>
     </div>
   )
 }

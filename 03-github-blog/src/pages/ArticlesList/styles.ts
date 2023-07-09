@@ -51,7 +51,7 @@ export const ItemsContainer = styled.div`
 export const ItemContainer = styled.button`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
 
   background: ${({ theme }) => theme.colors['base-post']};
   border-radius: 10px;
@@ -83,4 +83,9 @@ export const ItemDescription = styled.span`
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+`
+
+export const Time = styled.time`
+  align-self: self-end;
+  font-size: ${({ theme }) => theme.typography.sm};
 `
