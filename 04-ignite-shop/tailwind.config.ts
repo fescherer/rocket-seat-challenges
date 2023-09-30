@@ -13,7 +13,9 @@ const config: Config = {
       icon: '#8D8D99',
       text: '#C4C4CC',
       title: '#E1E1E6',
-      white: '#FFFFFF'
+      white: '#FFFFFF',
+
+      card: '#202024E6'
     },
     extend: {
     },

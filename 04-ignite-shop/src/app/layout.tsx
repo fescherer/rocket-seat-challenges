@@ -25,7 +25,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
-      <body className={`max-w-7xl m-auto p-4 ${roboto.className}`}>
+      <body className={`max-w-7xl m-auto p-4 bg-background text-text ${roboto.className}`}>
         <ShoppingCarToggleUtilProvider>
           <Header />
 
