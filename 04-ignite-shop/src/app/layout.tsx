@@ -3,6 +3,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import { ShoppingCarToggleUtilProvider } from '@/contexts/ShoppingCarToggle.context.'
+import 'react-indiana-drag-scroll/dist/style.css'
+import 'simplebar-react/dist/simplebar.min.css';
 
 const roboto = Roboto({
   weight: ['900', '700', '500', '400', '300', '100'],
@@ -25,7 +27,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
-      <body className={`max-w-7xl m-auto p-4 bg-background text-text ${roboto.className}`}>
+      <body className={`max-w-7xl m-auto p-4 bg-background scroll-smooth text-text ${roboto.className}`}>
         <ShoppingCarToggleUtilProvider>
           <Header />
 

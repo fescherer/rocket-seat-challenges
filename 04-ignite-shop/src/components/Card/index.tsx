@@ -15,8 +15,8 @@ export function Card({item}: CardProps) {
   }).format(item.price / 100)
 
   return (
-    <div className="overflow-hidden relative group bg-gradient-to-b from-principal to-[#7465D4] min-w-[300px] rounded flex">
-      <Image src={`/shirts/${item.image}.png`} width={520} height={480} alt={`Foto da camisa ${item.name}`} />
+    <div className="overflow-hidden relative group bg-gradient-to-b from-principal to-[#7465D4] min-w-[300px] rounded flex select-none">
+      <Image className="pointer-events-none" src={`/shirts/${item.image}.png`} width={520} height={480} alt={`Foto da camisa ${item.name}`} />
 
      <footer className="flex justify-between absolute bottom-0 w-[calc(100%-1rem)] bg-card translate-y-full group-hover:translate-y-0 transition-transform rounded p-4 mx-2">
         <div className="flex flex-col text-base text-white">

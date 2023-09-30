@@ -12,7 +12,9 @@
     "@phosphor-icons/react": "^2.0.13",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-indiana-drag-scroll": "^3.0.3-alpha",
+    "simplebar-react": "^3.2.4"
   },
   "devDependencies": {
     "@types/node": "latest",
