@@ -3,16 +3,22 @@
 import { ICard } from "@/@types/Card";
 import Image from "next/image";
 import {Bag} from '@phosphor-icons/react'
+import { useShoppingCarContext } from "@/contexts";
 
 interface CardProps  {
   item: ICard
 }
 
 export function Card({item}: CardProps) {
+  const { addItem } = useShoppingCarContext()
   const price = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL'
   }).format(item.price / 100)
+
+  function handleCarItems() {
+    addItem(item)
+  }
 
   return (
     <div className="overflow-hidden relative group bg-gradient-to-b from-principal to-[#7465D4] min-w-[300px] rounded flex select-none">
@@ -23,7 +29,7 @@ export function Card({item}: CardProps) {
           <span>{item.name}</span>
           <span className="text-principal font-bold text-lg">{price}</span>
         </div>
-        <button className="text-text p-2 rounded transition-all hover:text-white bg-principal hover:bg-light"><Bag size={24}/></button>
+        <button onClick={handleCarItems} className="text-text p-2 rounded transition-all hover:text-white bg-principal hover:bg-light"><Bag size={24}/></button>
       </footer>
     </div>
   )

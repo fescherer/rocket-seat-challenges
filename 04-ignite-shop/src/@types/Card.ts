@@ -4,3 +4,9 @@ export interface ICard {
   image: string,
   price: number
 }
+
+export interface ICardShopping {
+  id: string,
+  quantity: number,
+  product: ICard
+}

@@ -23,5 +23,4 @@ export const ShoppingCarToggleUtilProvider = ({ children }: PropsWithChildren) =
   )
 }
 
-export const useShoppingCarToggleContext = () =>
-  React.useContext(ShoppingCarToggleContext)
+
