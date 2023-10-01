@@ -1,9 +1,10 @@
 'use client'
 
-import { ICard } from "@/@types/Card";
 import Image from "next/image";
 import {Bag} from '@phosphor-icons/react'
 import { useShoppingCarContext } from "@/contexts";
+import { ICard } from "@/@types/Card";
+import { formatPrice } from "../../../util/functions";
 
 interface CardProps  {
   item: ICard
@@ -11,10 +12,7 @@ interface CardProps  {
 
 export function Card({item}: CardProps) {
   const { addItem } = useShoppingCarContext()
-  const price = new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL'
-  }).format(item.price / 100)
+  const price = formatPrice(item.price)
 
   function handleCarItems() {
     addItem(item)
@@ -22,7 +20,7 @@ export function Card({item}: CardProps) {
 
   return (
     <div className="overflow-hidden relative group bg-gradient-to-b from-principal to-[#7465D4] min-w-[300px] rounded flex select-none">
-      <Image className="pointer-events-none" src={`/shirts/${item.image}.png`} width={520} height={480} alt={`Foto da camisa ${item.name}`} />
+      <Image className="pointer-events-none" src={item.imageUrl} width={520} height={480} alt={`Foto da camisa ${item.name}`} />
 
      <footer className="flex justify-between absolute bottom-0 w-[calc(100%-1rem)] bg-card translate-y-full group-hover:translate-y-0 transition-transform rounded p-4 mx-2">
         <div className="flex flex-col text-base text-white">

@@ -1,12 +1,21 @@
 'use client'
 
 import { useShoppingCarContext, useShoppingCarToggleContext } from "@/contexts"
-import {CaretLeft, CaretRight, Minus, Plus, X} from "@phosphor-icons/react"
+import { Minus, Plus, X} from "@phosphor-icons/react"
 import Image from "next/image"
+import { formatPrice } from "../../../util/functions"
 
 export function ShoppingCar() {
   const { isToggled, setIsToggled } = useShoppingCarToggleContext()
   const { carItems, addItem, removeItem } = useShoppingCarContext()
+
+  const totalItems = carItems.reduce((acc, carItem) => {
+    return acc + carItem.quantity
+  }, 0)
+
+  const totalIPrice = carItems.reduce((acc, carItem) => {
+    return acc + (carItem.quantity * carItem.product.price)
+  }, 0)
 
   function handleClose() {
     setIsToggled(prev => !prev)
@@ -34,13 +43,13 @@ export function ShoppingCar() {
               carItems.map(item => (
                 <div key={item.id} className="flex gap-4">
                   <div className="overflow-hidden relative group bg-gradient-to-b from-principal to-[#7465D4] min-w-[100px] rounded flex select-none">
-                    <Image className="pointer-events-none" src={`/shirts/${item.product.image}.png`} width={100} height={100} alt={`Foto da camisa ${item.product.name}`} />
+                    <Image className="pointer-events-none" src={item.product.imageUrl} width={100} height={100} alt={`Foto da camisa ${item.product.name}`} />
                   </div>
 
                   <div className="flex flex-col gap-1 w-full">
                     <div className="flex flex-col gap-1 flex-1">
                       <span>{item.product.name}</span>
-                      <span className="font-bold text-white text-lg">{item.product.price}</span>
+                      <span className="font-bold text-white text-lg">{formatPrice(item.product.price)}</span>
                     </div>
 
                     <div className="flex items-center bg-background p-1 w-full rounded">
@@ -62,12 +71,12 @@ export function ShoppingCar() {
             <div className='flex flex-col gap-1 text-title'>
               <div className='flex justify-between'>
                 <span>Quantidade</span>
-                <span>3 itens</span>
+                <span>{totalItems}{` ${totalItems > 1 ? 'itens' : 'item'}`}</span>
               </div>
 
               <div className='flex justify-between font-bold text-lg'>
                 <span>Valor total</span>
-                <span className='text-xl'>R$ 270,00</span>
+                <span className='text-xl'>{formatPrice(totalIPrice)}</span>
               </div>
             </div>
             <button onClick={handleBuy} className='bg-principal w-full p-4 rounded-md transition-all hover:bg-light'>

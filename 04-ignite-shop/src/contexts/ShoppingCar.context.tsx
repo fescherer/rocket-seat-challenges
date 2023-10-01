@@ -39,7 +39,7 @@ export const ShoppingCarProvider = ({ children }: PropsWithChildren) => {
       let isQuantityZero: boolean = false
       const newArray = prev.map(itemCar => {
         if(itemCar.id === item.id) {
-          if(itemCar.quantity === 0) isQuantityZero = true
+          if(itemCar.quantity === 1) isQuantityZero = true
           return {...itemCar, quantity: itemCar.quantity - 1}
         } else return itemCar
       })
