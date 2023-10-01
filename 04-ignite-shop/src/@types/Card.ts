@@ -4,6 +4,7 @@ export interface ICard {
   imageUrl: string,
   price: number
   defaultPriceId: string
+  description?: string
 }
 
 export interface ICardShopping {

@@ -3,10 +3,19 @@ import Stripe from "stripe"
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import { Metadata } from "next"
 
 type CheckoutProps = {
   searchParams: {
     session_id: string
+  }
+}
+
+export const metadata: Metadata = {
+  title: 'Compra efetuada',
+
+  robots: {
+    index: false
   }
 }
 
