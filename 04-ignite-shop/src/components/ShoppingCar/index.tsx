@@ -4,6 +4,8 @@ import { useShoppingCarContext, useShoppingCarToggleContext } from "@/contexts"
 import { Minus, Plus, X} from "@phosphor-icons/react"
 import Image from "next/image"
 import { formatPrice } from "../../../util/functions"
+import axios from "axios"
+import { ICard } from "@/@types/Card"
 
 export function ShoppingCar() {
   const { isToggled, setIsToggled } = useShoppingCarToggleContext()
@@ -21,7 +23,25 @@ export function ShoppingCar() {
     setIsToggled(prev => !prev)
   }
 
-  function handleBuy() {
+  async function handleBuy() {
+    try {
+      const items = carItems.map(item => ({
+        price: item.product.defaultPriceId,
+        quantity: item.quantity
+      }))
+
+      const response = await axios.post('/api/checkout', {
+        line_items: items
+      })
+
+      const { checkoutUrl } = response.data
+
+      window.location.href = checkoutUrl
+
+    } catch(err) {
+      alert('Error')
+    }
+
     setIsToggled(prev => !prev)
   }
 

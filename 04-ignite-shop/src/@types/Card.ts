@@ -3,6 +3,7 @@ export interface ICard {
   name: string,
   imageUrl: string,
   price: number
+  defaultPriceId: string
 }
 
 export interface ICardShopping {
