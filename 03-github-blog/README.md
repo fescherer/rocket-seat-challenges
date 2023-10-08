@@ -43,7 +43,7 @@ A Github blog using issues as articles
 
 <a name="about"></a>
 
-## 💬 About 💬
+## 📕 About 📕
 
 This project was made based on challenge 03 of Rockeseat Bootcamp Ignite.
 

@@ -28,8 +28,6 @@ Rocketseat challenges 1, 2 and 3
 •
 <a href="#install">Getting Started</a>
 •
-<a href="#usage">How to use</a>
-•
 <a href="#info">Info</a>
 •
 <a href="#contact">Contact me</a>
@@ -43,7 +41,7 @@ Rocketseat challenges 1, 2 and 3
 
 <a name="about"></a>
 
-## 💬 About 💬
+## 📕 About 📕
 
 This is a collection of [Rocketseat](https://www.rocketseat.com.br) challenges.
 

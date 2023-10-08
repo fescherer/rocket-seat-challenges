@@ -43,7 +43,7 @@ A coffee delivery systeam
 
 <a name="about"></a>
 
-## 💬 About 💬
+## 📕 About 📕
 
 This project was made based on challenge 02 of Rockeseat Bootcamp Ignite.
 

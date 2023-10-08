@@ -43,7 +43,7 @@ A todo list to practice simple react concepts
 
 <a name="about"></a>
 
-## 💬 About 💬
+## 📕 About 📕
 
 This project was made based on challenge 01 of Rockeseat Bootcamp Ignite.
 
