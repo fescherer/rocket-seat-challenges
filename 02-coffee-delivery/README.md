@@ -83,24 +83,24 @@ To get this project up and running locally on your pc, follow the steps:
 
 - npm
   ```sh
-  npm install npm@latest -g
+   npm install npm@latest -g
   ```
 
 ### Installation
 
 1. Clone the repo
-   ```sh
+  ```sh
    git clone https://github.com/fescherer/rocketseat-challenges.git
-   ```
+  ```
 2. Go to project's folder
   ```sh
-  cd rocketseat/02-coffee-delivery
+   cd rocketseat/02-coffee-delivery
   ```
 
 3. Install NPM packages
-   ```sh
+  ```sh
    npm install
-   ```
+  ```
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -133,6 +133,8 @@ Don't forget to leave a star if you like the project ✨
 
 </div>
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- **********************🐲Contact Me🐲********************** -->
 <a name="contact"></a>
 
@@ -152,7 +154,7 @@ My name is Felipe Scherer. You can find my socials at [my Github profile](https:
   <tr>
     <td align="center">
       <a href="https://github.com/fescherer">
-        <img src="https://avatars.githubusercontent.com/u/62115215" width="100px;" alt="Felipe Scherer Picture"/><br>
+        <img src="https://github.com/fescherer.png" width="100px;" alt="Felipe Scherer Picture"/><br>
         <sub>
           <b>Felipe Scherer</b>
         </sub>
