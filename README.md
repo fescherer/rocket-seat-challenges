@@ -69,10 +69,12 @@ This repository has challenges 1, 2 and 3. To find the others challenges [go to 
 
 <div align="center">
 
+[![Vite][Vite]][vite-url]
 [![React][React.js]][React-url]
 [![HTML 5][html 5]][html-url]
 [![CSS 3][css 3]][css-url]
 [![Typescript][typescript]][typescript-url]
+[![Styled Components][Styled Components]][styled-components-url]
 
 </div>
 
@@ -178,7 +180,7 @@ My name is Felipe Scherer. You can find my socials at [my Github profile](https:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Badges and Badges Link -->
-
+<!-- https://github.com/Ileriayo/markdown-badges -->
 [contributors-shield]: https://img.shields.io/github/contributors/fescherer/rocketseat-challenges.svg?style=for-the-badge
 [contributors-url]: https://github.com/fescherer/rocketseat-challenges/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/fescherer/rocketseat-challenges.svg?style=for-the-badge
@@ -204,3 +206,7 @@ My name is Felipe Scherer. You can find my socials at [my Github profile](https:
 [typescript-url]: https://www.typescriptlang.org
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
+[Styled Components]: https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white
+[styled-components-url]: https://styled-components.com
+[Vite]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
+[vite-url]: https://vitejs.dev
