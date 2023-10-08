@@ -76,49 +76,6 @@ This repository has challenges 1, 2 and 3. To find the others challenges [go to 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- **********************🐲Getting Started🐲********************** -->
-
-<a name="install"></a>
-
-## 🚂 Getting Started 🚂
-
-To get this project up and running locally on your pc, follow the steps:
-
-### Pre requisites
-
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/fescherer/rocketseat-challenges.git
-   ```
-
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- **********************🐲How to use🐲********************** -->
-
-<a name="usage"></a>
-
-## 🙋 How to use 🙋
-
-![Home screen](https://github.com/fescherer/project-euler/assets/62115215/39578de4-2e7a-4430-941c-765c8b287d26)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- **********************🐲Info🐲********************** -->
-
-<a name="info"></a>
-
 ## 🌎 Info 🌎
 
 Don't forget to leave a star if you like the project ✨
